@@ -1,2 +1,4 @@
 .*
 BigData
+__pycache__
+venv
