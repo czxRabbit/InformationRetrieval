@@ -44,3 +44,20 @@ if __name__ == '__main__':
     print("Sorted tokens:  (count {})".format(len(sorted_tokens)))
     print(sorted_tokens)
 
+    # Inverted index test case
+    posting_list = {}
+    for pairs in sorted_tokens:
+        token, document_id = pairs[0], pairs[1]
+        if not posting_list.get(token):
+            posting_list[token] = [{document_id: 1}]
+        else:
+            is_added = 0
+            for item in posting_list[token]:
+                if item.get(document_id):
+                    item[document_id] += 1
+                    is_added = 1
+                    break
+            if not is_added:
+                posting_list[token].append({document_id: 1})
+    print("posting_list:")
+    print(posting_list)
