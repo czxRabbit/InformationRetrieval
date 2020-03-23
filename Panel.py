@@ -3,6 +3,7 @@ from LinguisticModules import Linguistic_modules
 from Tokenization import Tokenize_file
 from Sorting import Sort
 from Posting import Posting
+from Intersect import intersect5
 import os
 import time
 
@@ -50,3 +51,4 @@ if __name__ == '__main__':
     print("Posting list: (count {})".format(len(posting_list)))
     # print(result3)
     print("Running seconds: {}".format(time.time() - start_time))
+    intersect5(posting_list)
