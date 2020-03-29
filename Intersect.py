@@ -22,7 +22,6 @@ def intersect4(list_t1, list_t2):
 
 
 def intersect5(posting_list):
-    start = time.time()
     answer = []
     keywords = []  # user inputs
     k_list = []  # a list of lists
@@ -30,6 +29,7 @@ def intersect5(posting_list):
     templist = []
 
     inputs = input("Please Enter:")
+    start = time.time()
     stemmer = PorterStemmer()
     list1 = inputs.split()
     for i in range(len(list1)):
