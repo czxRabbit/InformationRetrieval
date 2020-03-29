@@ -5,7 +5,6 @@
 # component will be a concatenated list of tokens from all documents.
 
 
-# TODO optimization
 def Sort(tokens):
     tokens.sort(key=lambda element: (element[0], element[1]))
     return tokens
